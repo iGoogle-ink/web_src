@@ -81,8 +81,7 @@
     <div class=""></div>
 <!-- 模板存放的地方 -->
 <div id="api-doc-templ"  ref="api_doc_templ" style="display:none">
-
-**简要描述：**
+**接口描述：**
 
 - 用户注册接口
 
@@ -92,7 +91,11 @@
 **请求方式：**
 - POST/GET
 
-**参数：**
+**注意事项：**
+
+- 携带头域信息：Session:{SessionKey}
+
+**请求参数说明：**
 
 |参数名|必选|位置|类型|说明|
 |:----    |:---|:---|:----- |-----   |
@@ -100,7 +103,20 @@
 |username |是  |Body|string |用户名   |
 |password |是  |Query|string | 密码    |
 
- **返回示例**
+**返回参数说明**
+
+|参数名|必选|类型|说明|
+|:-----  |:---|:-----|-----                           |
+|error_code |是  |int   |用户组id，1：超级管理员；2：普通用户  |
+|data |是  |Object   |用户组id，1：超级管理员；2：普通用户  |
+|uid |是  |string   |用户组id，1：超级管理员；2：普通用户  |
+|username |是  |string   |用户组id，1：超级管理员；2：普通用户  |
+|name |是  |string   |用户组id，1：超级管理员；2：普通用户  |
+|groupid |是  |int   |用户组id，1：超级管理员；2：普通用户  |
+|reg_time |是  |string   |用户组id，1：超级管理员；2：普通用户  |
+|last_login_time |是  |string   |用户组id，1：超级管理员；2：普通用户  |
+
+**返回示例**
 
 ```
   {
@@ -116,22 +132,9 @@
   }
 ```
 
- **返回参数说明**
+**备注**
 
-|参数名|必选|类型|说明|
-|:-----  |:---|:-----|-----                           |
-|error_code |是  |int   |用户组id，1：超级管理员；2：普通用户  |
-|data |是  |Object   |用户组id，1：超级管理员；2：普通用户  |
-|uid |是  |string   |用户组id，1：超级管理员；2：普通用户  |
-|username |是  |string   |用户组id，1：超级管理员；2：普通用户  |
-|name |是  |string   |用户组id，1：超级管理员；2：普通用户  |
-|groupid |是  |int   |用户组id，1：超级管理员；2：普通用户  |
-|reg_time |是  |string   |用户组id，1：超级管理员；2：普通用户  |
-|last_login_time |是  |string   |用户组id，1：超级管理员；2：普通用户  |
-
- **备注**
-
-- 更多返回错误代码请看首页的错误代码描述
+- 更多信息请看首页的API说明
 
 </div>
 <div id="database-doc-templ" ref="database_doc_templ" style="display:none">
