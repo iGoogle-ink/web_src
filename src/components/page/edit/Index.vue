@@ -97,9 +97,8 @@
 |参数名|必选|位置|类型|说明|
 |:----    |:---|:---|:----- |-----   |
 |id |是  |Path|int |用户名   |
-|username |是  |Query|string |用户名   |
+|username |是  |Body|string |用户名   |
 |password |是  |Query|string | 密码    |
-|name     |否  |Query|string | 昵称    |
 
  **返回示例**
 
